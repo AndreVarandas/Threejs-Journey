@@ -1,0 +1,16 @@
+# Dist files
+dist
+
+# Build cache
+.parcel-cache
+
+# Node
+node_modules
+
+# OSX
+.DS_Store
+
+# Editors
+.vscode
+.idea
+.vs
