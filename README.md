@@ -15,4 +15,3 @@ yarn
 # Run dev server
 yarn dev
 ```
-
