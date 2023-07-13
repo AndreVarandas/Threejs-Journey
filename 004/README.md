@@ -1,6 +1,6 @@
-## Notes on 000
+## Notes on 004
 
-This is just a template for future classes.
+004 class was mainly about setting up a proper development environment. We use vite to run a dev server and to bundle our code. We also use vanilla JS and a script.js file to write our code.
 
 **Key points**
 
