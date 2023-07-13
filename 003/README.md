@@ -1,4 +1,4 @@
-## Notes on 001
+## Notes on 003
 
 This lesson is a simple introduction to the THREE.js library. It creates a scene, a camera, and a cube. It then renders the scene and camera to the screen.
 
@@ -11,5 +11,10 @@ This lesson is a simple introduction to the THREE.js library. It creates a scene
 ## Run it
 
 ```bash
-npx parcel 001/index.html
+
+# Install dependencies
+yarn
+
+# Run dev server
+yarn dev
 ```
