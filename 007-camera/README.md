@@ -11,6 +11,9 @@ The field of view is the angle of the camera's lens. The larger the angle, the m
 **Key points**
 
 -   Perspective camera is the most common camera type
+-   Near and far clipping planes define the range of distances that the camera can see
+-   Using extreme values for the near and far clipping planes can cause rendering issues such as z-fighting
+-   Orthographic camera far elements are the same size as near elements
 
 ## Run it
 
