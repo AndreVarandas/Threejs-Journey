@@ -4,7 +4,8 @@ A GUI that allows you to debug easily your code. There are a few options and lib
 
 **Key points**
 
--
+-   Easy to use
+-   Fast to debug your code and see the results
 
 ## Run it
 
