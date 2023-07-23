@@ -3,6 +3,10 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import GUI from 'lil-gui'
 import gsap from 'gsap'
 
+// Since the version 0.152 of Three.js, colors might look different by default.
+// These two lines have been added in order to get the same results.
+THREE.ColorManagement.enabled = false
+
 /**
  * Debug UI
  */
@@ -83,6 +87,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(sizes.width, sizes.height)
 renderer.render(scene, camera)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+renderer.outputColorSpace = THREE.LinearSRGBColorSpace
 
 // Animations
 const tick = () => {
