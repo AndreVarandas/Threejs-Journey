@@ -1,6 +1,10 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
+// Since the version 0.152 of Three.js, colors might look different by default.
+// These two lines have been added in order to get the same results.
+THREE.ColorManagement.enabled = false
+
 const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
 const sizes = {
@@ -58,6 +62,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(sizes.width, sizes.height)
 renderer.render(scene, camera)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+renderer.outputColorSpace = THREE.LinearSRGBColorSpace
 
 // Animations
 
