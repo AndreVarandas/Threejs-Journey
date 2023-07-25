@@ -8,6 +8,57 @@ import gsap from 'gsap'
 THREE.ColorManagement.enabled = false
 
 /**
+ * Textures
+ */
+const loadingManager = new THREE.LoadingManager()
+
+// loadingManager.onLoad = () => {
+//   console.log('load')
+// }
+
+// loadingManager.onError = () => {
+//   console.log('error')
+// }
+
+// loadingManager.onProgress = () => {
+//   console.log('progress')
+// }
+
+const textureLoader = new THREE.TextureLoader(loadingManager)
+const colorTexture = textureLoader.load('/static/textures/door/color.jpg')
+const alphaTexture = textureLoader.load('/static/textures/door/opacity.jpg')
+const heightTexture = textureLoader.load('/static/textures/door/height.png')
+const normalTexture = textureLoader.load('/static/textures/door/normal.jpg')
+const ambientOcclusionTexture = textureLoader.load(
+  '/static/textures/door/occlusion.jpg',
+)
+const metalnessTexture = textureLoader.load(
+  '/static/textures/door/metallic.jpg',
+)
+const roughnessTexture = textureLoader.load(
+  '/static/textures/door/roughness.jpg',
+)
+
+// colorTexture.repeat.x = 2
+// colorTexture.repeat.y = 3
+// colorTexture.wrapS = THREE.MirroredRepeatWrapping
+// colorTexture.wrapT = THREE.MirroredRepeatWrapping
+
+// colorTexture.offset.x = 0.5
+// colorTexture.offset.y = 0.5
+
+// colorTexture.rotation = Math.PI / 4
+// colorTexture.center.x = 0.5
+// colorTexture.center.y = 0.5
+
+// colorTexture.minFilter = THREE.NearestFilter
+
+// If nearest filter is used in the minFilter, we can disable the mipmaps to gain performance
+colorTexture.generateMipmaps = false
+colorTexture.magFilter = THREE.NearestFilter
+colorTexture.minFilter = THREE.NearestFilter
+
+/**
  * Debug UI
  */
 const gui = new GUI()
@@ -53,7 +104,9 @@ window.addEventListener('dblclick', () =>
 // Red cube
 const geometry = new THREE.BoxGeometry(1, 1, 1)
 
-const material = new THREE.MeshBasicMaterial({ color: parameters.color })
+const material = new THREE.MeshBasicMaterial({
+  map: colorTexture,
+})
 
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
