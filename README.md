@@ -22,6 +22,7 @@ You can see the results of the lessons live here:
 -   [009 - Geometries](https://009-geometries.netlify.app/)
 -   [010 - Debug UI](https://010-debug-ui.netlify.app/)
 -   [011 - Textures](https://011-textures.netlify.app/)
+-   [012 - Materials](https://012-materials.netlify.app/)
 
 ```bash
 # Install dependencies
