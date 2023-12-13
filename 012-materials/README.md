@@ -1,15 +1,16 @@
-## Notes on 012 Materials
+# Three.js Journey
 
-**Key points**
+## Setup
+Download [Node.js](https://nodejs.org/en/download/).
+Run this followed commands:
 
--
+``` bash
+# Install dependencies (only the first time)
+npm install
 
-## Run it
+# Run the local server at localhost:8080
+npm run dev
 
-```bash
-# Install dependencies
-yarn
-
-# Run dev server
-yarn dev
+# Build for production in the dist/ directory
+npm run build
 ```

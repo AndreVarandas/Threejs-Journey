@@ -1,19 +1,16 @@
 {
-    "name": "000",
-    "private": true,
-    "version": "0.0.0",
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "preview": "vite preview"
-    },
-    "devDependencies": {
-        "vite": "^4.4.0"
-    },
-    "dependencies": {
-        "gsap": "^3.12.2",
-        "lil-gui": "^0.18.2",
-        "three": "^0.154.0"
-    }
+  "name": "threejs-journey-exercise",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^4.5.0"
+  },
+  "dependencies": {
+    "three": "^0.158.0"
+  }
 }
